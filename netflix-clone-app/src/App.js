@@ -1,19 +1,22 @@
-import React from 'react';
-import './css/App.css';
-import Row from './components/Row';
-
+import React from "react";
+import "./css/App.css";
+import Row from "./components/Row";
+import requests from "./requests";
 
 function App() {
   return (
     <div className="App">
-      <Row title="NETFLIX ORIGINALS"/>
-      <Row title="Trending Now"/>
-      <Row title="Top Rated"/>
-      <Row title="Action"/>
-      <Row title="Comedy"/>
-      <Row title="Horror"/>
-      <Row title="Romance"/>
-      <Row title="Documentaries"/>
+      <Row
+        title="NETFLIX ORIGINALS"
+        fetchUrl={requests.fetchNetflixOriginals}
+      />
+      <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
+      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
+      <Row title="Action" fetchUrl={requests.fetchActionMovies} />
+      <Row title="Comedy" fetchUrl={requests.fetchComedyMovies} />
+      <Row title="Horror" fetchUrl={requests.fetchHorrorMovies} />
+      <Row title="Romance" fetchUrl={requests.fetchRomanceMovies} />
+      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
     </div>
   );
 }
