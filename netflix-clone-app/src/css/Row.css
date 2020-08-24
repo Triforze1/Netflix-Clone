@@ -20,3 +20,15 @@
 .row-poster:hover {
   transform: scale(1.08);
 }
+
+.row-posterLarge {
+  max-height: 250px;
+}
+
+.row-posterLarge:hover {
+  transform: scale(1.09);
+}
+
+.row {
+  margin-left: 20px;
+}
